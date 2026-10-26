@@ -1,0 +1,15 @@
+# Acceptance tests — how each is met
+
+| Requirement | How it is met | Evidence |
+|---|---|---|
+| Every live metric has a real source and a working retrieval pipeline | 93 of 94 catalogue series retrieved live from official endpoints; the 94th (DMO) fails honestly | `docs/verification-report.md`; `python -m app.cli verify` |
+| Works without paid APIs, paid AI or mandatory subscriptions | No paid dependency; Companies House is optional (free key) and the app explains when it is absent | `/api/meta` → `paid_dependencies: []`; `test_sources_and_meta`, `test_companies_house_without_key_is_explicit` |
+| A failed source cannot silently replace real data with fabricated values | Failed runs write nothing; real data always wins; demo data only when a series has no real data and always labelled | `test_failed_source_never_fabricates_and_keeps_history`, `test_schema_change_is_rejected_not_ingested`, `test_real_data_wins_over_demo`, `test_series_without_real_data_is_labelled_demo`, `test_demo_off_returns_empty_not_fake`, `test_cannot_correlate_real_with_demo` |
+| Each metric exposes source, observation date, retrieval date, units and methodology | Series detail + workspace Identity/Provenance/Methodology panels | `test_series_detail_exposes_identity_and_provenance` |
+| Clicking a data point opens the underlying details and history | All KPIs, chart points, heatmap cells, map areas, bars and table rows link to `/investigate?series=&geo=&dim=&period=` | `frontend/src/lib/filters.test.ts` |
+| Filters apply consistently across charts, maps and tables | Global `from/to/geo/sector` live in the URL, are carried into every link and back via `return`; map clicks set `geo`, heatmap/table clicks set `sector` | `filters.test.ts`; Regions and Industry pages |
+| Changes and comparisons use correct units, periods and definitions | Measure-type rules (pp vs %), calendar-matched y/y, refusal of invalid transforms, single-axis charts / small multiples | `test_pct_change_for_levels_and_pp_for_rates`, `test_rules_refuse_inappropriate_transformations`, `test_yoy_uses_exact_calendar_match_not_position`, `test_compare_indexed_refuses_rate`, `test_analysis_respects_rules` |
+| API limits, outages, missing data, provisional/revised figures handled explicitly | Rate limiter, backoff, Retry-After, conditional requests; statuses stale/delayed/provisional/unavailable; revisions table + ONS vintages; missing-data report | `test_http.py` (9 tests), `test_status_rules`, `test_ingest_then_idempotent_then_revision`, `test_missing_report_detects_gaps_and_nulls` |
+| CSV and JSON exports contain traceable source metadata | Per-row publisher, dataset id, request URL, source page, licence, attribution, retrieval time, run id, data_status | `test_csv_export_has_traceable_metadata`, `test_json_export_and_demo_warning` |
+| Automated tests verify calculations, parsing, validation and stale alerts | 56 backend + 9 frontend tests | `pytest`, `npm test` |
+| Working local setup, environment template and deployment instructions | `docs/setup.md`, `.env.example`, `docker-compose.yml`, `docs/deployment.md` | — |

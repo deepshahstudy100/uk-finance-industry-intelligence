@@ -1,0 +1,100 @@
+{ "head": {
+    "vars": [ "region" , "month" , "averagePrice" , "housePriceIndex" , "percentageAnnualChange" , "salesVolume" ]
+  } ,
+  "results": {
+    "bindings": [
+      { 
+        "region": { "type": "uri" , "value": "http://landregistry.data.gov.uk/id/region/london" } ,
+        "month": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#gYearMonth" , "value": "2026-03" } ,
+        "averagePrice": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "546111" } ,
+        "housePriceIndex": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#decimal" , "value": "95.70" } ,
+        "percentageAnnualChange": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#decimal" , "value": "-1.40" } ,
+        "salesVolume": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "5756" }
+      } ,
+      { 
+        "region": { "type": "uri" , "value": "http://landregistry.data.gov.uk/id/region/london" } ,
+        "month": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#gYearMonth" , "value": "2026-04" } ,
+        "averagePrice": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "554363" } ,
+        "housePriceIndex": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#decimal" , "value": "97.10" } ,
+        "percentageAnnualChange": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#decimal" , "value": "-1.80" } ,
+        "salesVolume": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "4994" }
+      } ,
+      { 
+        "region": { "type": "uri" , "value": "http://landregistry.data.gov.uk/id/region/london" } ,
+        "month": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#gYearMonth" , "value": "2026-05" } ,
+        "averagePrice": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "549535" } ,
+        "housePriceIndex": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#decimal" , "value": "96.30" } ,
+        "percentageAnnualChange": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#decimal" , "value": "-2.80" } ,
+        "salesVolume": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "4595" }
+      } ,
+      { 
+        "region": { "type": "uri" , "value": "http://landregistry.data.gov.uk/id/region/london" } ,
+        "month": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#gYearMonth" , "value": "2026-06" } ,
+        "averagePrice": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "551440" } ,
+        "housePriceIndex": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#decimal" , "value": "96.60" } ,
+        "percentageAnnualChange": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#decimal" , "value": "-2.90" } ,
+        "salesVolume": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "4309" }
+      } ,
+      { 
+        "region": { "type": "uri" , "value": "http://landregistry.data.gov.uk/id/region/london" } ,
+        "month": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#gYearMonth" , "value": "2026-07" } ,
+        "averagePrice": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "550340" } ,
+        "housePriceIndex": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#decimal" , "value": "96.40" } ,
+        "percentageAnnualChange": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#decimal" , "value": "-3.20" }
+      } ,
+      { 
+        "region": { "type": "uri" , "value": "http://landregistry.data.gov.uk/id/region/london" } ,
+        "month": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#gYearMonth" , "value": "2026-08" } ,
+        "averagePrice": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "554430" } ,
+        "housePriceIndex": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#decimal" , "value": "97.10" } ,
+        "percentageAnnualChange": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#decimal" , "value": "-2.20" }
+      } ,
+      { 
+        "region": { "type": "uri" , "value": "http://landregistry.data.gov.uk/id/region/united-kingdom" } ,
+        "month": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#gYearMonth" , "value": "2026-03" } ,
+        "averagePrice": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "268631" } ,
+        "housePriceIndex": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#decimal" , "value": "102.90" } ,
+        "percentageAnnualChange": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#decimal" , "value": "0.20" } ,
+        "salesVolume": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "63828" }
+      } ,
+      { 
+        "region": { "type": "uri" , "value": "http://landregistry.data.gov.uk/id/region/united-kingdom" } ,
+        "month": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#gYearMonth" , "value": "2026-04" } ,
+        "averagePrice": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "270966" } ,
+        "housePriceIndex": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#decimal" , "value": "103.80" } ,
+        "percentageAnnualChange": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#decimal" , "value": "4.20" } ,
+        "salesVolume": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "55854" }
+      } ,
+      { 
+        "region": { "type": "uri" , "value": "http://landregistry.data.gov.uk/id/region/united-kingdom" } ,
+        "month": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#gYearMonth" , "value": "2026-05" } ,
+        "averagePrice": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "272221" } ,
+        "housePriceIndex": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#decimal" , "value": "104.30" } ,
+        "percentageAnnualChange": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#decimal" , "value": "3.10" } ,
+        "salesVolume": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "56366" }
+      } ,
+      { 
+        "region": { "type": "uri" , "value": "http://landregistry.data.gov.uk/id/region/united-kingdom" } ,
+        "month": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#gYearMonth" , "value": "2026-06" } ,
+        "averagePrice": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "270690" } ,
+        "housePriceIndex": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#decimal" , "value": "103.70" } ,
+        "percentageAnnualChange": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#decimal" , "value": "1.50" } ,
+        "salesVolume": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "55159" }
+      } ,
+      { 
+        "region": { "type": "uri" , "value": "http://landregistry.data.gov.uk/id/region/united-kingdom" } ,
+        "month": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#gYearMonth" , "value": "2026-07" } ,
+        "averagePrice": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "272146" } ,
+        "housePriceIndex": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#decimal" , "value": "104.30" } ,
+        "percentageAnnualChange": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#decimal" , "value": "1.20" }
+      } ,
+      { 
+        "region": { "type": "uri" , "value": "http://landregistry.data.gov.uk/id/region/united-kingdom" } ,
+        "month": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#gYearMonth" , "value": "2026-08" } ,
+        "averagePrice": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#integer" , "value": "273037" } ,
+        "housePriceIndex": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#decimal" , "value": "104.60" } ,
+        "percentageAnnualChange": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#decimal" , "value": "0.90" }
+      }
+    ]
+  }
+}

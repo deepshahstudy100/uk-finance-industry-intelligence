@@ -1,0 +1,41 @@
+name: Verify live sources
+
+# Re-checks every catalogue identifier against the official endpoints (read-only; no data stored).
+on:
+  schedule:
+    - cron: "17 8 * * 1"   # Mondays 08:17 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: backend
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -e .
+      - name: Live verification
+        id: verify
+        continue-on-error: true   # a single source outage (e.g. DMO bot protection) must not hide the report
+        env:
+          UKINTEL_DATABASE_URL: sqlite:////tmp/verify.db
+          UKINTEL_USER_AGENT: "UKIntelPlatform/0.1.0 (+https://github.com/${{ github.repository }})"
+        run: python -m app.cli verify --write
+      - name: Publish report
+        if: always()
+        run: cat ../docs/verification-report.md >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: verification-report
+          path: docs/verification-report.md
+      - name: Flag failures
+        if: steps.verify.outcome == 'failure'
+        run: echo "::warning::One or more sources failed live verification - see the report in the job summary."
